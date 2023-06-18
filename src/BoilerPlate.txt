@@ -1,0 +1,21 @@
+import styled from "@emotion/styled";
+
+type Props = {}
+
+function Component(props: Props) {
+    return (
+        <div>hello</div>
+    )
+}
+
+
+
+
+type StyledProps = {}
+
+const Name = styled(Component)<StyledProps>(props => ({
+
+}))
+
+
+export default Name;
