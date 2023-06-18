@@ -5,14 +5,19 @@ import { RouterProvider } from "react-router-dom";
 import router from 'router';
 import { store } from 'store/store';
 import { Provider } from 'react-redux'
-
+import { ThemeProvider } from '@emotion/react';
+import { theme_1 } from 'utils/themes';
+import CssBaseline from '@mui/material/CssBaseline/CssBaseline';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <ThemeProvider theme={theme_1}>
+        <CssBaseline/>
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </Provider>
   </React.StrictMode>
 );
