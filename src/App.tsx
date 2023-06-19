@@ -1,15 +1,13 @@
 import Button from "components/Button";
+import TextInput from "components/TextInput";
+import { colors } from "utils/themes";
 
 
 function App() {
   return (
-    <div>
+    <div style={{background: colors.primary}} >
       starter template
-      <Button 
-        variant="ghost"
-        size="medium"  
-        iconRight
-      >Hello</Button>
+      <TextInput placeholder="your@email.com" variant="opaque" />
     </div>
   );
 }
