@@ -1,15 +1,28 @@
-import Button from "components/Button";
-import TextInput from "components/TextInput";
 import { colors } from "utils/themes";
 import Stepper from "components/Stepper";
+import Checkbox from "components/Checkbox";
+import styled from "@emotion/styled";
 
 
-function App() {
+type Props = {
+  className?: string
+}
+
+function App(props: Props) {
   return (
-    <div style={{background: colors.primary}} >
-      <Stepper/>
+    <div {...props} >
+      <Checkbox label="moussa" className="c"  />
     </div>
   );
 }
 
-export default App;
+type StyledProps = {}
+
+const AppS = styled(App)<StyledProps>(props => ({
+  // background: "red",
+  "& > .c > label": {
+    color: "red",
+  }
+}))
+
+export default AppS;
