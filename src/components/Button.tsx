@@ -4,12 +4,10 @@ import { colors } from "utils/themes";
 import { ReactComponent as CaretDown } from "assets/icons/Caret--down.svg";
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
-    variant?: "white" | "secondary" | "primary" | "opaque" | "ghost";
-    size?: "small" | "medium";
     iconRight?: boolean;
 }
 
-function Component({variant = "white", size = "small", iconRight = false, children, ...props}: Props) {
+function Component({iconRight = false, children, ...props}: Props) {
     return (
         <button {...props} >
             {children}
@@ -21,9 +19,14 @@ function Component({variant = "white", size = "small", iconRight = false, childr
 
 
 
-type StyledProps = {}
+type StyledProps = {
+    variant?: "white" | "secondary" | "primary" | "opaque" | "ghost";
+    size?: "small" | "medium";
+}
 
-const Button = styled(Component)<StyledProps>(({variant = "white", size = "small", iconRight = false}) => ({
+const Button = styled(Component, {
+    shouldForwardProp: prop => prop !== "variant" && prop !== "size"
+})<StyledProps>(({variant = "white", size = "small"}) => ({
     display: "inline-flex",
     alignItems: "center",
     justifyContent: "center",
