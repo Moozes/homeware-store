@@ -2,6 +2,7 @@ import { colors } from "utils/themes";
 import Stepper from "components/Stepper";
 import Checkbox from "components/Checkbox";
 import styled from "@emotion/styled";
+import Header from "components/Header";
 
 
 type Props = {
@@ -11,7 +12,7 @@ type Props = {
 function App(props: Props) {
   return (
     <div {...props} >
-      <Checkbox label="moussa" className="c"  />
+      <Header/>
     </div>
   );
 }
@@ -19,10 +20,7 @@ function App(props: Props) {
 type StyledProps = {}
 
 const AppS = styled(App)<StyledProps>(props => ({
-  // background: "red",
-  "& > .c > label": {
-    color: "red",
-  }
+
 }))
 
 export default AppS;
