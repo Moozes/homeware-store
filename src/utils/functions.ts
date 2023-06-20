@@ -7,7 +7,7 @@ export function getFontCSS(fontFamily: "'Clash Display', sans-serif" | "'Satoshi
     }
 }
 
-// media query max width
+// generate media query string
 export function mq(maxWidth: number) {
     return `@media (max-width: ${maxWidth}px)`
 }

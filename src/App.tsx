@@ -1,8 +1,6 @@
-import { colors } from "utils/themes";
-import Stepper from "components/Stepper";
-import Checkbox from "components/Checkbox";
 import styled from "@emotion/styled";
 import Header from "components/Header";
+import Footer from "components/Footer";
 
 
 type Props = {
@@ -13,6 +11,7 @@ function App(props: Props) {
   return (
     <div {...props} >
       <Header/>
+      <Footer/>
     </div>
   );
 }
