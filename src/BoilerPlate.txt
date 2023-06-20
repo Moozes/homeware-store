@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import { HTMLProps } from "react";
 
-type Props = {}
+type Props = HTMLProps<HTMLDivElement>
 
 function Component(props: Props) {
     return (

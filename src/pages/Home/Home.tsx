@@ -1,0 +1,42 @@
+import styled from "@emotion/styled";
+import { HTMLProps } from "react";
+import CardsSection from "./components/CardsSection";
+import { mq } from "utils/functions";
+import Header from "components/Header";
+import HeroSection from "./components/HeroSection";
+import Footer from "components/Footer";
+
+type Props = HTMLProps<HTMLDivElement>
+
+function Component(props: Props) {
+    return (
+        <div {...props} >
+            <Header/>
+            <HeroSection/>
+            <div className="container">
+                <CardsSection/>
+            </div>
+            <Footer/>
+        </div>
+    )
+}
+
+
+
+
+type StyledProps = {}
+
+const Home = styled(Component)<StyledProps>(props => ({
+    "& > .container": {
+        padding: "0 80px"
+    },
+
+    [mq(680)]: {
+        "& > .container": {
+            padding: "0 24px"
+        },
+    }
+}))
+
+
+export default Home;
