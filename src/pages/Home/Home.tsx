@@ -8,6 +8,7 @@ import Footer from "components/Footer";
 import Product from "components/Product";
 import chairImage from "assets/images/chair.png"
 import FeaturedProducts from "components/FeaturedProducts";
+import StorySection from "./components/StorySection";
 
 type Props = HTMLProps<HTMLDivElement>
 
@@ -19,6 +20,7 @@ function Component(props: Props) {
             <div className="container">
                 <CardsSection/>
                 <FeaturedProducts/>
+                <StorySection/>
             </div>
             <Footer/>
         </div>
