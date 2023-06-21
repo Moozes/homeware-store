@@ -9,6 +9,7 @@ import Product from "components/Product";
 import chairImage from "assets/images/chair.png"
 import FeaturedProducts from "components/FeaturedProducts";
 import StorySection from "./components/StorySection";
+import NewsLetter from "components/NewsLetter";
 
 type Props = HTMLProps<HTMLDivElement>
 
@@ -22,6 +23,7 @@ function Component(props: Props) {
                 <FeaturedProducts/>
                 <StorySection/>
             </div>
+            <NewsLetter/>
             <Footer/>
         </div>
     )
