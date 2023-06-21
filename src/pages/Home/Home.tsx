@@ -7,19 +7,20 @@ import HeroSection from "./components/HeroSection";
 import Footer from "components/Footer";
 import Product from "components/Product";
 import chairImage from "assets/images/chair.png"
+import FeaturedProducts from "components/FeaturedProducts";
 
 type Props = HTMLProps<HTMLDivElement>
 
 function Component(props: Props) {
     return (
         <div {...props} >
-            {/* <Header/>
+            <Header/>
             <HeroSection/>
             <div className="container">
                 <CardsSection/>
+                <FeaturedProducts/>
             </div>
-            <Footer/> */}
-            <Product imageSrc={chairImage} name="the Dandy chair" price="250" />
+            <Footer/>
         </div>
     )
 }

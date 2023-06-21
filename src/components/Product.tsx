@@ -25,7 +25,7 @@ function Component({imageSrc, name, price, ...divProps}: Props) {
 type StyledProps = {}
 
 const Product = styled(Component)<StyledProps>(props => ({
-    width: "305px",
+    // width: "305px",
     img: {
         width: "100%",
         marginBottom: "24px",
