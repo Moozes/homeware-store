@@ -19,7 +19,7 @@ function Component(props: Props) {
 type StyledProps = {}
 
 const PageTitle = styled(Component)<StyledProps>(props => ({
-    width: "704px",
+    maxWidth: "704px",
     margin: "auto",
     ...getFontCSS("'Clash Display', sans-serif", 400, 36, 1.4*36),
     color: colors.darkPrimary,

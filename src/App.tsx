@@ -9,9 +9,9 @@ type Props = HTMLProps<HTMLDivElement>
 function Component(props: Props) {
   return (
     <div {...props} >
-      {/* <Header/> */}
+      <Header/>
       <Outlet/>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }

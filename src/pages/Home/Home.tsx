@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { HTMLProps } from "react";
-import CardsSection from "./components/CardsSection";
+import CardsSection from "../../components/CardsSection";
 import { mq } from "utils/functions";
 import Header from "components/Header";
 import HeroSection from "./components/HeroSection";
