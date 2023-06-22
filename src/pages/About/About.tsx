@@ -12,7 +12,7 @@ function Component(props: Props) {
         <div {...props} >
             <PageTitle/>
             <ImageGrid/>
-            <CardsSection/>
+            <CardsSection className="cards" />
             <NewsLetter/>
         </div>
     )
@@ -24,7 +24,10 @@ function Component(props: Props) {
 type StyledProps = {}
 
 const About = styled(Component)<StyledProps>(props => ({
-
+    "& > .cards": {
+        paddingLeft: "24px",
+        paddingRight: "24px",
+    }
 }))
 
 
