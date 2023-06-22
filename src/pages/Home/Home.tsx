@@ -16,7 +16,6 @@ type Props = HTMLProps<HTMLDivElement>
 function Component(props: Props) {
     return (
         <div {...props} >
-            <Header/>
             <HeroSection/>
             <div className="container">
                 <CardsSection/>
@@ -24,7 +23,6 @@ function Component(props: Props) {
                 <StorySection/>
             </div>
             <NewsLetter/>
-            <Footer/>
         </div>
     )
 }
