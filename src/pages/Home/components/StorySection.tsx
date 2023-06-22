@@ -4,6 +4,7 @@ import { HTMLProps } from "react";
 import { getFontCSS, mq } from "utils/functions";
 import { colors } from "utils/themes";
 import storyImage from "assets/images/story.png";
+import { NavLink } from "react-router-dom";
 
 type Props = HTMLProps<HTMLDivElement>
 
@@ -13,7 +14,9 @@ function Component(props: Props) {
             <div className="left">
                 <div className="title">It started with a small idea</div>
                 <div className="text">A global brand with local beginnings, our story begain in a small studio in South London in early 2014</div>
-                <Button variant="opaque" >View Collection</Button>
+                <NavLink to="products" >
+                    <Button variant="opaque" >View Collection</Button>
+                </NavLink>
             </div>
             <div className="right">
                 <img src={storyImage} alt="" />

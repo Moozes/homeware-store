@@ -10,6 +10,7 @@ import { ReactComponent as InstagramIcon } from "assets/icons/Logo--instagram.sv
 import { ReactComponent as SkypeIcon } from "assets/icons/Logo--skype.svg";
 import { ReactComponent as TwitterIcon } from "assets/icons/Logo--twitter.svg";
 import { ReactComponent as PinterestIcon } from "assets/icons/Logo--pinterest.svg";
+import { NavLink } from "react-router-dom";
 
 type Props = HTMLProps<HTMLElement>
 
@@ -21,24 +22,24 @@ function Component(props: Props) {
             <div className="lists">
                 <ul className="list-1">
                     <li className="title">Menu</li>
-                    <li className="list-item">New arrivals</li>
-                    <li className="list-item">Best sellers</li>
-                    <li className="list-item">Recently viewed</li>
-                    <li className="list-item">Popular this week</li>
-                    <li className="list-item">All products</li>
+                    <li className="list-item"><NavLink to="products">New arrivals</NavLink></li>
+                    <li className="list-item"><NavLink to="products">Best sellers</NavLink></li>
+                    <li className="list-item"><NavLink to="products">Recently viewed</NavLink></li>
+                    <li className="list-item"><NavLink to="products">Popular this week</NavLink></li>
+                    <li className="list-item"><NavLink to="products">All products</NavLink></li>
                 </ul>
                 <ul className="list-2">            
                     <li className="title">Categories</li>
-                    <li className="list-item">Crockery</li>
-                    <li className="list-item">Furniture</li>
-                    <li className="list-item">Homeware</li>
-                    <li className="list-item">Plant pots</li>
-                    <li className="list-item">Chairs</li>
-                    <li className="list-item">Crockery</li>
+                    <li className="list-item"><NavLink to="products">Crockery</NavLink></li>
+                    <li className="list-item"><NavLink to="products">Furniture</NavLink></li>
+                    <li className="list-item"><NavLink to="products">Homeware</NavLink></li>
+                    <li className="list-item"><NavLink to="products">Plant</NavLink> pots</li>
+                    <li className="list-item"><NavLink to="products">Chairs</NavLink></li>
+                    <li className="list-item"><NavLink to="products">Crockery</NavLink></li>
                 </ul>
                 <ul className="list-3">            
                     <li className="title">Our company</li>
-                    <li className="list-item">About us</li>
+                    <li className="list-item"><NavLink to="about">About us</NavLink></li>
                 </ul>
                 <div className="mailing-list">
                     <div className="title">Join our mailing list</div>
@@ -98,6 +99,10 @@ const Footer = styled(Component)<StyledProps>(props => ({
     },
     "& .list-item": {
         ...getFontCSS("'Satoshi', sans-serif", 400, 14, 19),
+    },
+    "& a": {
+        color: colors.white,
+        textDecoration: "none"
     },
     "& .mailing-list": {
         [mq(940)]: {

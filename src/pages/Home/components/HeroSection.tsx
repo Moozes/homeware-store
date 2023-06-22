@@ -4,6 +4,7 @@ import { HTMLProps } from "react";
 import heroBackground from "assets/images/hero.jpeg";
 import { colors } from "utils/themes";
 import { getFontCSS, mq } from "utils/functions";
+import { NavLink } from "react-router-dom";
 
 type Props = HTMLProps<HTMLDivElement>
 
@@ -14,7 +15,9 @@ function Component(props: Props) {
                 <div className="title">Luxury homeware for people who love timeless design quality</div>
                 <div className="text">Shop the new Spring 2022 collection today</div>
                 <div className="empty"></div>
-                <Button variant="secondary" >View collection</Button>
+                <NavLink to="products">
+                    <Button variant="secondary" >View collection</Button>
+                </NavLink>
             </div>
             <div className="mobile-hero"></div>
         </div>

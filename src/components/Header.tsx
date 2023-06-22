@@ -10,17 +10,17 @@ type Props =  HTMLProps<HTMLHeadElement>
 function Component(props: Props) {
     return (
         <header {...props} >
-            <NavLink to="#" className="brand">Avion</NavLink>
+            <NavLink to="/" className="brand">Avion</NavLink>
             <span className="empty" ></span>
             <span className="links">
-                <NavLink to="#">All Products</NavLink>
-                <NavLink to="#">About us</NavLink>
+                <NavLink to="products">All Products</NavLink>
+                <NavLink to="about">About us</NavLink>
             </span>
             <span className="icons">
-                <NavLink to="#">
+                {/* <NavLink to="#"> */}
                     <SearchIcon/>
-                </NavLink>
-                <NavLink to="#">
+                {/* </NavLink> */}
+                <NavLink to="shopping-cart">
                     <ShoppingCartIcon/>
                 </NavLink>
             </span>

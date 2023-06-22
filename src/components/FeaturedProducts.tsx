@@ -5,6 +5,7 @@ import chairImage from "assets/images/chair.png";
 import image from "assets/images/hero.jpeg"
 import Button from "./Button";
 import { mq } from "utils/functions";
+import { NavLink } from "react-router-dom";
 
 
 type Props = HTMLProps<HTMLDivElement>
@@ -23,7 +24,9 @@ function Component(props: Props) {
                 </div>
             </div>
                 <div className="button">
-                    <Button  variant="secondary" >View collection</Button>
+                    <NavLink to="products" >
+                        <Button  variant="secondary" >View collection</Button>
+                    </NavLink>
                 </div>
         </div>
     )
