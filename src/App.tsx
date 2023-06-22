@@ -19,7 +19,11 @@ function Component(props: Props) {
 type StyledProps = {}
 
 const App = styled(Component)<StyledProps>(props => ({
- 
+  "*" : {
+    margin: 0,
+    padding: 0,
+    boxSizing: "border-box"
+  }
 }))
 
 export default App;
