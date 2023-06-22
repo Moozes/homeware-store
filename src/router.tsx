@@ -1,4 +1,5 @@
 import App from "App";
+import About from "pages/About/About";
 import Home from "pages/Home/Home";
 import { createBrowserRouter } from "react-router-dom";
 
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "about",
-                element: <p>2nd child of app</p>
+                element: <About/>
             },
         ]
     }
