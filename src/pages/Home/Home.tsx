@@ -10,10 +10,12 @@ import chairImage from "assets/images/chair.png"
 import FeaturedProducts from "components/FeaturedProducts";
 import StorySection from "./components/StorySection";
 import NewsLetter from "components/NewsLetter";
+import useScrollToTop from "hooks/useScrollToTop";
 
 type Props = HTMLProps<HTMLDivElement>
 
 function Component(props: Props) {
+    useScrollToTop()
     return (
         <div {...props} >
             <HeroSection/>
