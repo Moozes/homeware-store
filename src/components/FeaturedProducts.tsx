@@ -4,6 +4,7 @@ import Product from "./Product";
 import chairImage from "assets/images/chair.png";
 import image from "assets/images/hero.jpeg"
 import Button from "./Button";
+import { mq } from "utils/functions";
 
 
 type Props = HTMLProps<HTMLDivElement>
@@ -39,7 +40,7 @@ const FeaturedProducts = styled(Component)<StyledProps>(props => ({
         display: "flex",
         alignItems: "stretch",
         gap: "20px",
-        flexWrap: "wrap",
+        // flexWrap: "wrap",
         marginBottom: "48px",
         "& .product-group": {
             display: "flex",
@@ -54,6 +55,12 @@ const FeaturedProducts = styled(Component)<StyledProps>(props => ({
     "& > .button": {
         display: "flex",
         justifyContent: "center"
+    },
+
+    [mq(900)]: {
+        "& > .products": {
+            flexWrap: "wrap",
+        },
     }
 }))
 
