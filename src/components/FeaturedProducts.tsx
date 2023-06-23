@@ -25,7 +25,7 @@ function Component(props: Props) {
             </div>
                 <div className="button">
                     <NavLink to="products" >
-                        <Button  variant="secondary" >View collection</Button>
+                        <Button  variant="secondary" size="medium">View collection</Button>
                     </NavLink>
                 </div>
         </div>

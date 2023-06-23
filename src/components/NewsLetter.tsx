@@ -32,7 +32,7 @@ function Component(props: Props) {
                 </div>
                 <div className="form-container">
                     <TextInput className="email-input" variant="primary" placeholder="your@email.com" />
-                    <Button variant="primary" >Sign up</Button>
+                    <Button variant="primary" size="medium">Sign up</Button>
                 </div>
             </div>
         </div>

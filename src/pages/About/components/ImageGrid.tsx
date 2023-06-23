@@ -16,7 +16,7 @@ function Component(props: Props) {
                     <div className="title">From a studio in London to a global brand with over 400 outlets</div>
                     <div className="text-1">When we started Avion, the idea was simple. Make high quality furniture affordable and available for the mass market.</div>
                     <div className="text-2">Handmade, and lovingly crafted furniture and homeware is what we live, breathe and design so our Chelsea boutique become the hotbed for the London interior design community.</div>
-                    <Button className="button" variant="secondary" >Get in touch</Button>
+                    <Button className="button" variant="secondary" size="medium">Get in touch</Button>
                 </div>
                 <div className="image-container">
                     <img src={image1} alt="" />
@@ -30,7 +30,7 @@ function Component(props: Props) {
                     <div className="title">Our service isn't just personal, it's actually hyper personally exquisite</div>
                     <div className="text-1">When we started Avion, the idea was simple. Make high quality furniture affordable and available for the mass market. </div>
                     <div className="text-2">Handmade, and lovingly crafted furniture and homeware is what we live, breathe and design so our Chelsea boutique become the hotbed for the London interior design community.</div>
-                    <Button className="button" variant="secondary" >Get in touch</Button>
+                    <Button className="button" variant="secondary" size="medium">Get in touch</Button>
                 </div>
             </div>
         </div>

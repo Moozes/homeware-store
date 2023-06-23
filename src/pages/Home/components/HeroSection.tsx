@@ -16,7 +16,7 @@ function Component(props: Props) {
                 <div className="text">Shop the new Spring 2022 collection today</div>
                 <div className="empty"></div>
                 <NavLink to="products">
-                    <Button variant="secondary" >View collection</Button>
+                    <Button variant="secondary" size="medium">View collection</Button>
                 </NavLink>
             </div>
             <div className="mobile-hero"></div>

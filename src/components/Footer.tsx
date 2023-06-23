@@ -45,7 +45,7 @@ function Component(props: Props) {
                     <div className="title">Join our mailing list</div>
                     <div className="email-form">
                         <TextInput className="text-input" type="email" variant="opaque" placeholder="your@email.com"/>
-                        <Button variant="white" >Sign Up</Button>
+                        <Button variant="white" size="medium" >Sign Up</Button>
                     </div>
                 </div>
             </div>

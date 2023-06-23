@@ -15,7 +15,7 @@ function Component(props: Props) {
                 <div className="title">It started with a small idea</div>
                 <div className="text">A global brand with local beginnings, our story begain in a small studio in South London in early 2014</div>
                 <NavLink to="products" >
-                    <Button variant="opaque" >View Collection</Button>
+                    <Button variant="opaque" size="medium">View Collection</Button>
                 </NavLink>
             </div>
             <div className="right">
