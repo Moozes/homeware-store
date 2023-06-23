@@ -1,0 +1,22 @@
+import styled from "@emotion/styled";
+import { HTMLProps } from "react";
+
+type Props = HTMLProps<HTMLDivElement>
+
+function Component(props: Props) {
+    return (
+        <div>hello</div>
+    )
+}
+
+
+
+
+type StyledProps = {}
+
+const Name = styled(Component)<StyledProps>(props => ({
+
+}))
+
+
+export default Name;
