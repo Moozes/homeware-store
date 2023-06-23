@@ -38,12 +38,18 @@ const CardsSection = styled(Component)<StyledProps>(props => ({
         display: "flex",
         alignItems: "stretch",
         gap: "22px",
-        flexWrap: "wrap",
+        // flexWrap: "wrap",
         justifyContent: "center",
         "& > div": {
             width: "305px",
             flexGrow: 1
         }
+    },
+
+    [mq(1000)]: {
+        "& > .cards": {
+            flexWrap: "wrap",
+        },
     },
 
     [mq(680)]: {
