@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { HTMLProps } from "react";
-import image from "assets/images/newsletter.jpeg";
 import { ReactComponent as CheckmarkIcon } from "assets/icons/Checkmark--filled.svg";
 import bgImage from "assets/images/newsletter.jpeg"; 
 import TextInput from "./TextInput";
