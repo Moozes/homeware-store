@@ -16,7 +16,7 @@ function Component(props: Props) {
                 <div className="text">Shop the new Spring 2022 collection today</div>
                 <div className="empty"></div>
                 <NavLink to="products">
-                    <Button variant="secondary" size="medium">View collection</Button>
+                    <Button className="button" variant="secondary" size="medium">View collection</Button>
                 </NavLink>
             </div>
             <div className="mobile-hero"></div>
@@ -84,6 +84,9 @@ const HeroSection = styled(Component)<StyledProps>(props => ({
                 marginBottom: "32px",
                 ...getFontCSS("'Clash Display', sans-serif", 400, 16, 22),
             },
+            ".button": {
+                width: "100%"
+            }
         },
         ".mobile-hero": {
             display: "block",

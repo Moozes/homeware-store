@@ -98,7 +98,9 @@ const ImageGrid = styled(Component)<StyledProps>(props => ({
                 "& > .text-2": {
                     ...getFontCSS("'Satoshi', sans-serif", 400, 14, 1.5*14),
                 },
-                "& > .button": {},
+                "& > .button": {
+                    width: "100%",
+                },
             },
             "& > .image-container": {
                 "& > img": {

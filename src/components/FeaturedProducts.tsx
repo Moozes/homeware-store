@@ -23,9 +23,9 @@ function Component(props: Props) {
                     <Product className="product" imageSrc={chairImage} name="The Dandy chair" price="250"/>
                 </div>
             </div>
-                <div className="button">
-                    <NavLink to="products" >
-                        <Button  variant="secondary" size="medium">View collection</Button>
+                <div className="button-container">
+                    <NavLink to="products" className="button-link">
+                        <Button className="button"  variant="secondary" size="medium">View collection</Button>
                     </NavLink>
                 </div>
         </div>
@@ -43,7 +43,6 @@ const FeaturedProducts = styled(Component)<StyledProps>(props => ({
         display: "flex",
         alignItems: "stretch",
         gap: "20px",
-        // flexWrap: "wrap",
         marginBottom: "48px",
         "& .product-group": {
             display: "flex",
@@ -55,7 +54,7 @@ const FeaturedProducts = styled(Component)<StyledProps>(props => ({
             }
         }
     },
-    "& > .button": {
+    "& > .button-container": {
         display: "flex",
         justifyContent: "center"
     },
@@ -63,6 +62,15 @@ const FeaturedProducts = styled(Component)<StyledProps>(props => ({
     [mq(900)]: {
         "& > .products": {
             flexWrap: "wrap",
+        },
+        "& > .button-container": {
+            justifyContent: "flex-start",
+            "& > .button-link": {
+                width: "100%",
+                "& > .button": {
+                    width: "100%"
+                }
+            }
         },
     }
 }))
