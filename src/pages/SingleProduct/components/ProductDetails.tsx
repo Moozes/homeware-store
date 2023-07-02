@@ -3,7 +3,7 @@ import { HTMLProps } from "react";
 import chaire2 from "assets/images/chair2.png"
 import Stepper from "components/Stepper";
 import Button from "components/Button";
-import { getFontCSS } from "utils/functions";
+import { getFontCSS, mq } from "utils/functions";
 import { colors } from "utils/themes";
 
 type Props = HTMLProps<HTMLDivElement>
@@ -45,7 +45,7 @@ function Component(props: Props) {
                     <div className="title-2">Amount:</div>
                     <Stepper className="stepper" />
                     <div className="empty"></div>
-                    <Button size="medium" variant="primary" >Add to cart</Button>
+                    <Button className="add-button" size="medium" variant="primary" >Add to cart</Button>
                 </div>
             </div>
         </div>
@@ -122,6 +122,7 @@ const ProductDetails = styled(Component)<StyledProps>(props => ({
             display: "flex",
             alignItems: "center",
             gap: "22px",
+            flexWrap: "wrap",
             ".stepper": {
                 background: colors.lightGray
             },
@@ -132,6 +133,76 @@ const ProductDetails = styled(Component)<StyledProps>(props => ({
                 marginBottom: 0
             }
         }
+    },
+
+    [mq(900)]: {
+        flexDirection: "column",
+        "& > .img-container": {
+            width: "100%",
+        },
+        "& > .details": {
+            width: "100%",
+        },
+    },
+
+    [mq(680)]: {
+        "& > .img-container": {
+            img: {
+            }
+        },
+        "& > .details": {
+            padding: "28px 24px 46px",
+            ".title-1": {
+                fontSize: "24px",
+            },
+            ".price": {
+                fontSize: "20px",
+                marginBottom: "28px"
+            },
+            ".title-2": {
+                marginBottom: "12px"
+            },
+            ".text": {
+                fontSize: "14px",
+                marginBottom :"12px"
+            },
+            ul: {
+                marginBottom: "28px",
+                li: {
+                }
+            },
+            table: {
+                width: "100%",
+                marginBottom: "32px",
+                "caption.title-2": {
+                    marginBottom: "16px"
+                },
+                th: {
+                    paddingRight: 0,
+                },
+                td: {
+                    textAlign: "center",
+                },
+                "th:not(:last-of-type), td:not(:last-of-type)": {
+                    borderRight: "1px solid #EBE8F4"
+                }
+            },
+            "& > .actions": {
+                flexDirection: "column",
+                alignItems: "flex-start",
+                gap: "12px",
+                ".stepper": {
+                    width: "100%",
+                },
+                ".empty": {
+                },
+                ".title-2": {
+                },
+                ".add-button": {
+                    width: "100%"
+                }
+            }
+        },
     }
 }))
 

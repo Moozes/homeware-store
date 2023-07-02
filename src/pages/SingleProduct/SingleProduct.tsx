@@ -4,7 +4,7 @@ import ProductDetails from "./components/ProductDetails";
 import FeaturedProducts from "components/FeaturedProducts";
 import CardsSection from "components/CardsSection";
 import NewsLetter from "components/NewsLetter";
-import { getFontCSS } from "utils/functions";
+import { getFontCSS, mq } from "utils/functions";
 import { colors } from "utils/themes";
 
 type Props = HTMLProps<HTMLDivElement>
@@ -38,6 +38,15 @@ const SingleProduct = styled(Component)<StyledProps>(props => ({
             ...getFontCSS("'Clash Display', sans-serif", 400, 32, 1.2*32),
             color: colors.darkPrimary
         }
+    },
+    
+    [mq(680)]: {
+        "& > .container": {
+            padding: "0 24px",
+            "& > .title": {
+                fontSize: "20px"
+            }
+        },
     }
 }))
 
