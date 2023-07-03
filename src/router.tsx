@@ -1,6 +1,7 @@
 import App from "App";
 import About from "pages/About/About";
 import Home from "pages/Home/Home";
+import ShoppingCart from "pages/ShoppingCart/ShoppingCart";
 import SingleProduct from "pages/SingleProduct/SingleProduct";
 import { createBrowserRouter } from "react-router-dom";
 
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: "products/:id",
                 element: <SingleProduct/>
+            },
+            {
+                path: "shopping-cart",
+                element: <ShoppingCart/>
             },
         ]
     }
