@@ -129,7 +129,7 @@ const SingleProduct = styled(Component)<StyledProps>(props => ({
         }
     },
 
-    [mq(500)]: {
+    [mq(820)]: {
         "& > .desktop": {
             display: "none"
         },

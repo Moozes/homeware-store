@@ -3,7 +3,7 @@ import { HTMLProps } from "react";
 import SingleProduct from "./components/SingleProduct";
 import Button from "components/Button";
 import { colors } from "utils/themes";
-import { getFontCSS } from "utils/functions";
+import { getFontCSS, mq } from "utils/functions";
 
 type Props = HTMLProps<HTMLDivElement>
 
@@ -16,11 +16,13 @@ function Component(props: Props) {
                 <div className="cart-footer">
                     <div className="info-container">
                         <div className="info">Taxes and shipping are calculated at checkout</div>
-                        <div className="subtotal">Subtotal</div>
-                        <div className="total-price">£210</div>
+                        <div className="price-container">
+                            <div className="subtotal">Subtotal</div>
+                            <div className="total-price">£210</div>
+                        </div>
                     </div>
                     <div className="button-container">
-                        <Button variant="primary" size="medium" >Go to checkout</Button>
+                        <Button className="button" variant="primary" size="medium" >Go to checkout</Button>
                     </div>
                 </div>
             </div>
@@ -53,17 +55,48 @@ const ShoppingCart = styled(Component)<StyledProps>(props => ({
                     ...getFontCSS("'Satoshi', sans-serif", 400, 14, 1.5*14),
                     flexGrow: 1
                 },
-                "& > .subtotal": {
-                    ...getFontCSS("'Clash Display', sans-serif", 400, 20, 1.4*20),
-                },
-                "& > .total-price": {
-                    ...getFontCSS("'Clash Display', sans-serif", 400, 24, 1.4*24),       
+                "& > .price-container": {
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "16px",
+                    "& > .subtotal": {
+                        ...getFontCSS("'Clash Display', sans-serif", 400, 20, 1.4*20),
+                    },
+                    "& > .total-price": {
+                        ...getFontCSS("'Clash Display', sans-serif", 400, 24, 1.4*24),       
+                    },
                 },
             },
             "& > .button-container": {
-                textAlign: "end"
+                textAlign: "end",
             },
         }
+    },
+
+
+    [mq(750)]: {
+        padding: "0",
+        "& > .cart": {
+            padding: "36px 24px 50px",
+            "& > .cart-footer": {
+                "& > .info-container": {
+                    flexDirection: "column",
+                    alignItems: "flex-end",
+                    gap: "10px",
+                    "& > .info": {
+                        order: 2
+                    },
+                    "& > .price-container": {
+                        order: 1,
+                    },
+                },
+                "& > .button-container": {
+                    "& > .button": {
+                        width: "100%"
+                    }
+                },
+            }
+        },
     }
 }))
 
