@@ -1,4 +1,9 @@
-export function getFontCSS(fontFamily: "'Clash Display', sans-serif" | "'Satoshi', sans-serif", fontWeight: number, fontSize: number, lineHeight: number) {
+export function getFontCSS(
+    fontFamily: "'Clash Display', sans-serif" | "'Satoshi', sans-serif", 
+    fontWeight: number, 
+    fontSize: number, 
+    lineHeight: number
+) {
     return {
         fontFamily,
         fontWeight,

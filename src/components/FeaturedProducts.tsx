@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { HTMLProps } from "react";
 import Product from "./Product";
 import chairImage from "assets/images/chair.png";
-import image from "assets/images/hero.jpeg"
 import Button from "./Button";
 import { mq } from "utils/functions";
 import { NavLink } from "react-router-dom";
