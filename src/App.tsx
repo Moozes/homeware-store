@@ -10,9 +10,9 @@ function Component(props: Props) {
   return (
     <div {...props} >
       <ScrollToTop/>
-      {/* <Header/> */}
+      <Header/>
       <Outlet/>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }
