@@ -1,5 +1,6 @@
 import App from "App";
 import About from "pages/About/About";
+import AllProducts from "pages/AllProducts/AllProducts";
 import Home from "pages/Home/Home";
 import ShoppingCart from "pages/ShoppingCart/ShoppingCart";
 import SingleProduct from "pages/SingleProduct/SingleProduct";
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
             {
                 path: "about",
                 element: <About/>
+            },
+            {
+                path: "products",
+                element: <AllProducts/>
             },
             {
                 path: "products/:id",
